@@ -6,6 +6,7 @@ import 'package:geocoding/geocoding.dart';
 import 'pages/map_page.dart';
 import 'pages/timeline_page.dart';
 import 'state/app_state.dart';
+import 'state/login_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,7 +31,11 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: Colors.white,
           textTheme: ThemeData.light().textTheme.apply(bodyColor: Colors.black, displayColor: Colors.black),
         ),
-        home: const HomePage(),
+        initialRoute: '/login',
+        routes: {
+          '/login': (context) => LoginPage(),
+          '/home': (context) => HomePage(),
+        }
       ),
     );
   }
