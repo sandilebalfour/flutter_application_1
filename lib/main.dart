@@ -65,22 +65,19 @@ class _HomePageState extends State<HomePage> {
         case 'US':
         case 'CA':
           return '911';
-        case 'GB':
-        case 'UK':
-          return '999';
         case 'AU':
           return '000';
         case 'IN':
-          return '112';
+          return '084 124';
         case 'ZA':
           return '10111';
         case 'BR':
           return '190';
         default:
-          return '112';
+          return '084 124';
       }
     } catch (_) {
-      return '112';
+      return '084 124';
     }
   }
 
